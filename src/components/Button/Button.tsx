@@ -1,13 +1,18 @@
 import React from 'react'
 
+type FuncType = {
+    inc: () => void
+    reset: () => void
+}
+
 type PropsType = {
     title: string
-    func: 'inc' | 'reset'
+    func: FuncType
 }
 
 const Button = (props: PropsType) => {
     return (
-    <button onClick={() => props.func}>{props.title}</button>
+    <button>{props.title}</button>
     )
 }
 
