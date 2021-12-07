@@ -18,8 +18,8 @@ const Counter = (props: FuncType) => {
         <div>
             <div className='border'>
                 <div>{count}</div>
-                <Button title='Inc' func={inc}/>
-                <Button title='Reset' func={reset}/>
+                <Button title='Inc' func={props.inc}/>
+                <Button title='Reset' func={props.reset}/>
             </div>
         </div>
     )
