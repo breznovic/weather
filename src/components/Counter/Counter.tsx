@@ -2,12 +2,7 @@ import React, {useState} from 'react'
 import Button from "../Button/Button"
 import '../../App.css'
 
-type FuncType = {
-    inc: () => void
-    reset: () => void
-}
-
-const Counter = (props: FuncType) => {
+const Counter = () => {
 
     const [count, setCount] = useState(0)
 
@@ -18,8 +13,8 @@ const Counter = (props: FuncType) => {
         <div>
             <div className='border'>
                 <div>{count}</div>
-                <Button title='Inc' func={props.inc}/>
-                <Button title='Reset' func={props.reset}/>
+                <Button title='Inc' func={inc}/>
+                <Button title='Reset' func={reset}/>
             </div>
         </div>
     )
