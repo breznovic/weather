@@ -12,7 +12,7 @@ type PropsType = {
 
 const Button = (props: PropsType) => {
     return (
-    <button onClick={props.func.reset}>{props.title}</button>
+    <button onClick={props.func}>{props.title}</button>
     )
 }
 
