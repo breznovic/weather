@@ -1,13 +1,8 @@
 import React from 'react'
 
-type FuncType = {
-    inc: (setCount: number) => void
-    reset: (setCount: number) => void
-}
-
 type PropsType = {
     title: string
-    func: FuncType
+    func: () => void
 }
 
 const Button = (props: PropsType) => {

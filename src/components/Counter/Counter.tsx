@@ -6,8 +6,11 @@ const Counter = () => {
 
     const [count, setCount] = useState(0)
 
-    let inc = () => {setCount(count + 1)}
-    let reset = () => {setCount(0)}
+    let inc = () => {
+        console.log(count)
+        setCount(count + 1)
+    }
+    let reset = () => setCount(0)
 
     return (
         <div>
