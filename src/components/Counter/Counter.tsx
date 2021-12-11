@@ -6,8 +6,12 @@ const Counter = () => {
 
     const [count, setCount] = useState(0)
 
+    const maxValue = 5
+
     let inc = () => {
-        console.log(count)
+        if(maxValue === count) {
+            return
+        }
         setCount(count + 1)
     }
     let reset = () => setCount(0)
@@ -15,9 +19,11 @@ const Counter = () => {
     return (
         <div>
             <div className='border'>
-                <div>{count}</div>
-                <Button title='Inc' func={inc}/>
-                <Button title='Reset' func={reset}/>
+                <div className='container border count'>{count}</div>
+                <div className='border'>
+                <Button title='Inc' func={inc} maxValue={maxValue} />
+                <Button title='Reset' func={reset} maxValue={maxValue} />
+                </div>
             </div>
         </div>
     )
