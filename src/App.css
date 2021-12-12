@@ -1,3 +1,7 @@
+body {
+    background-color: lightblue;
+}
+
 .container {
     display: flex;
     flex-direction: row;
@@ -16,5 +20,12 @@
 }
 
 .btn {
+    border: solid 2px black;
+    box-shadow: black;
+    background-color: aquamarine;
+}
 
+.limit {
+    color: red;
+    font-size: 25px;
 }

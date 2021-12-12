@@ -2,11 +2,11 @@ import React, {useState} from 'react'
 import Button from "../Button/Button"
 import '../../App.css'
 
+export const maxValue = 5
+
 const Counter = () => {
 
     const [count, setCount] = useState(0)
-
-    const maxValue = 5
 
     let inc = () => {
         if(maxValue === count) {
@@ -19,10 +19,10 @@ const Counter = () => {
     return (
         <div>
             <div className='border'>
-                <div className='container border count'>{count}</div>
+                <div className={count < maxValue ? 'container border count' : 'container border count limit'}>{count}</div>
                 <div className='border'>
-                <Button title='Inc' func={inc} maxValue={maxValue} />
-                <Button title='Reset' func={reset} maxValue={maxValue} />
+                <Button disabled={count === maxValue} title='Inc' func={inc} maxValue={maxValue} />
+                <Button disabled={count === 0} title='Reset' func={reset} maxValue={maxValue} />
                 </div>
             </div>
         </div>
