@@ -1,16 +1,16 @@
 import React, {useState} from 'react'
 import Button from "../Button/Button"
 import '../../App.css'
-import Settings from "../Settings/Settings";
 import {useNavigate} from "react-router-dom";
 
+export const startValue = 0
 export const maxValue = 5
 
 const Counter = () => {
 
     const Navigate = useNavigate()
 
-    const [count, setCount] = useState(0)
+    const [count, setCount] = useState(startValue)
 
     let inc = () => {
         if (maxValue === count) {

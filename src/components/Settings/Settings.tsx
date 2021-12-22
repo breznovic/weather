@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Button from "../Button/Button"
 import '../../App.css'
 import {useNavigate} from "react-router-dom";
@@ -16,8 +16,10 @@ const Settings = () => {
         <div>
             <div className='border'>
                 <div className='border'>
-                    <div>Max value<input type='number' min={maxValue} /></div>
-                    <div>Start value<input type='number' min={minValue} /></div>
+                    <div>Max value<input type='number'
+                                         min={minValue}/></div>
+                    <div>Start value<input type='number'
+                                           max={maxValue}/></div>
                 </div>
                 <div className='container border'>
                     <Button disabled={false} title='Set' func={lid} maxValue={maxValue}/>
