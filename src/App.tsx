@@ -1,24 +1,20 @@
-import React, {useState} from 'react';
-import './App.css';
-import Counter from "./components/Counter/Counter";
-import Settings from "./components/Settings/Settings";
-import {Route, Routes} from 'react-router-dom'
+import React from 'react'
+import './App.css'
+import Sidebar from "./components/Sidebar/Sidebar";
 
 function App() {
 
     return (
-        <div>
-            <div className='container'>
-                <Routes>
-                    <Route path={'/counter'} element={<Counter/>}/>
-                    <Route path='/settings' element={<Settings/>}/>
-                </Routes>
-            </div>
+        <div className='App'>
+            <div className='AppGlass'></div>
+            <Sidebar/>
+            <div></div>
+            <div></div>
         </div>
-    );
+    )
 }
 
-export default App;
+export default App
 
 
 
