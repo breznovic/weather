@@ -9,7 +9,7 @@ export function changeCssRootVariables(theme: Theme) {
         'card-background',
         'card-shadow',
         'text-color',
-    ];
+    ]
 
     components.forEach(component => {
         root.style.setProperty(
